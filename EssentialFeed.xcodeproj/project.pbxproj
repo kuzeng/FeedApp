@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A1F8C782C1B935600673A49 /* CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1F8C772C1B935600673A49 /* CoreDataHelpers.swift */; };
 		6A42E71C2C13C50300F7CCD7 /* CodableFeedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A42E71B2C13C50300F7CCD7 /* CodableFeedStore.swift */; };
 		6A42E71E2C165A5000F7CCD7 /* FeedStoreSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A42E71D2C165A5000F7CCD7 /* FeedStoreSpecs.swift */; };
 		6A42E7202C165DD100F7CCD7 /* XCTestCase+FeedStoreSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A42E71F2C165DD100F7CCD7 /* XCTestCase+FeedStoreSpecs.swift */; };
@@ -67,6 +68,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6A1F8C772C1B935600673A49 /* CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelpers.swift; sourceTree = "<group>"; };
 		6A42E71B2C13C50300F7CCD7 /* CodableFeedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableFeedStore.swift; sourceTree = "<group>"; };
 		6A42E71D2C165A5000F7CCD7 /* FeedStoreSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedStoreSpecs.swift; sourceTree = "<group>"; };
 		6A42E71F2C165DD100F7CCD7 /* XCTestCase+FeedStoreSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+FeedStoreSpecs.swift"; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				6AFABCD72C18EA4700DEDEDE /* ManagedCache+CoreDataProperties.swift */,
 				6AFABCD82C18EA4700DEDEDE /* ManagedFeedImage+CoreDataClass.swift */,
 				6AFABCD92C18EA4700DEDEDE /* ManagedFeedImage+CoreDataProperties.swift */,
+				6A1F8C772C1B935600673A49 /* CoreDataHelpers.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -465,6 +468,7 @@
 				6AFABCDB2C18EA4700DEDEDE /* ManagedCache+CoreDataProperties.swift in Sources */,
 				6AFABCDC2C18EA4700DEDEDE /* ManagedFeedImage+CoreDataClass.swift in Sources */,
 				6AFABCDD2C18EA4700DEDEDE /* ManagedFeedImage+CoreDataProperties.swift in Sources */,
+				6A1F8C782C1B935600673A49 /* CoreDataHelpers.swift in Sources */,
 				6AC9539A2BE9FDCC00B05BDA /* FeedLoader.swift in Sources */,
 				6AFABCD22C18DC9D00DEDEDE /* CoreDataFeedStore.swift in Sources */,
 				6A5723632BF1C70400FC3121 /* FeedItemsMapper.swift in Sources */,
