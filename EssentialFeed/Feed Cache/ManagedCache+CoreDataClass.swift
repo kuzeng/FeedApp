@@ -11,5 +11,5 @@ import CoreData
 
 @objc(ManagedCache)
 public class ManagedCache: NSManagedObject {
-
+    
 }
