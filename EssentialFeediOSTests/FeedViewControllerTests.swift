@@ -28,7 +28,9 @@ final class FeedViewController: UITableViewController {
     }
     
     @objc private func load() {
-        loader?.load { _ in }
+        loader?.load { [weak self] _ in
+            self?.refreshControl?.endRefreshing()
+        }
     }
 }
 
@@ -59,7 +61,14 @@ final class FeedViewControllerTests: XCTestCase {
         XCTAssertEqual(loader.loadCallCount, 3)
     }
     
-    
+    func test_viewDidLoad_hidesLoadingIndicatorOnLoaderCompletion() {
+        let (sut, loader) = makeSUT()
+        
+        sut.loadViewIfNeeded()
+        loader.completeFeedLoading()
+        
+        XCTAssertEqual(sut.refreshControl?.isRefreshing, false)
+    }
     
     // MARK: - Helpers
     
@@ -72,27 +81,22 @@ final class FeedViewControllerTests: XCTestCase {
     }
     
     class LoaderSpy: FeedLoader {
-        private(set) var loadCallCount: Int = 0
+        private var completions = [(FeedLoader.Result) -> Void]()
+        
+        var loadCallCount: Int {
+            return completions.count
+        }
         
         func load(completion: @escaping (FeedLoader.Result) -> Void) {
-            loadCallCount += 1
+            completions.append(completion)
+        }
+        
+        func completeFeedLoading() {
+            completions[0](.success([]))
         }
     }
 }
 
-//private extension FeedViewController {
-//    func replaceRefreshControlWithFakeForiOS17Support() {
-//        let fake = FakeRefreshControl()
-//        
-//        refreshControl?.allTargets.forEach { target in
-//            refreshControl?.actions(forTarget: target, forControlEvent: .valueChanged)?.forEach { action in
-//                fake.addTarget(target, action: Selector(action), for: .valueChanged)
-//            }
-//        }
-//        
-//        refreshControl = fake
-//    }
-//}
 
 private extension UIRefreshControl {
     func simulatePullToRefresh() {
@@ -103,6 +107,20 @@ private extension UIRefreshControl {
         }
     }
 }
+
+//private extension FeedViewController {
+//    func replaceRefreshControlWithFakeForiOS17Support() {
+//        let fake = FakeRefreshControl()
+//
+//        refreshControl?.allTargets.forEach { target in
+//            refreshControl?.actions(forTarget: target, forControlEvent: .valueChanged)?.forEach { action in
+//                fake.addTarget(target, action: Selector(action), for: .valueChanged)
+//            }
+//        }
+//
+//        refreshControl = fake
+//    }
+//}
 
 //private class FakeRefreshControl: UIRefreshControl {
 //    private var _isRefreshing = false
