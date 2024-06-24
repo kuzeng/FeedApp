@@ -30,8 +30,8 @@
             filePath = "EssentialFeediOSTests/FeedViewControllerTests.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "226"
-            endingLineNumber = "226"
+            startingLineNumber = "257"
+            endingLineNumber = "257"
             landmarkName = "FeedViewController"
             landmarkType = "21">
          </BreakpointContent>
