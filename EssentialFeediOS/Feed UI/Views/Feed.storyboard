@@ -77,6 +77,9 @@
                                                             <state key="normal" title="🔄">
                                                                 <color key="titleColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                                             </state>
+                                                            <connections>
+                                                                <action selector="retryButtonTapped" destination="Fgd-56-7CB" eventType="touchUpInside" id="fmp-m5-Dgd"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.89019607840000003" green="0.89019607840000003" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -118,6 +121,14 @@
                                         <constraint firstItem="9dH-PF-ihG" firstAttribute="top" secondItem="i2o-Z5-ddT" secondAttribute="topMargin" priority="999" constant="6" id="z9b-k8-umm"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="descriptionLabel" destination="ru6-nw-jt3" id="oqp-Gj-xhY"/>
+                                    <outlet property="feedImageContainer" destination="usB-hg-nv7" id="tC4-Tf-l5C"/>
+                                    <outlet property="feedImageRetryButton" destination="1SM-f4-X4f" id="6Q1-KJ-Tf0"/>
+                                    <outlet property="feedImageView" destination="Je1-6A-Ct6" id="8jd-og-RpE"/>
+                                    <outlet property="locationContainer" destination="4id-dv-PRn" id="dRm-l6-pNv"/>
+                                    <outlet property="locationLabel" destination="2cc-eN-2hZ" id="MDM-ne-XU2"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
