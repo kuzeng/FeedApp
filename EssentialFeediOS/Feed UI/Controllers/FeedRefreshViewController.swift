@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import EssentialFeed
 
 protocol FeedRefreshViewControllerDelegate {
     func didRequestFeedRefresh()
@@ -20,7 +21,7 @@ final public class FeedRefreshViewController: NSObject, FeedLoadingView {
         delegate?.didRequestFeedRefresh()
     }
     
-    func display(_ viewModel: FeedLoadingViewModel) {
+    public func display(_ viewModel: FeedLoadingViewModel) {
         if viewModel.isLoading {
             view?.beginRefreshing()
         } else {
