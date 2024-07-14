@@ -174,10 +174,6 @@ final class RemoteFeedImageLoaderTests: XCTestCase {
         trackForMemoryLeaks(client, file: file, line: line)
         return (sut, client)
     }
-    
-    private func anyData() -> Data {
-        return Data("any data".utf8)
-    }
 
     private func failure(_ error: RemoteFeedImageDataLoader.Error) -> FeedImageDataLoader.Result {
         return .failure(error)
