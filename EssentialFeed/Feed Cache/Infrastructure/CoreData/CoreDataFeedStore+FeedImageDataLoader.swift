@@ -25,5 +25,4 @@ extension CoreDataFeedStore: FeedImageDataStore {
             })
         }
     }
-
 }
